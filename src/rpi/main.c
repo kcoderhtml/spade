@@ -259,21 +259,23 @@ int main() {
    * brick the device as soon as they start up.
    */
   while(!multicore_fifo_rvalid()) {
-    strcpy(errorbuf, "                    \n"
-                     "                    \n"
-                     "                    \n"
-                     "                    \n"
-                     "                    \n"
-                     "                    \n"
-                     "                    \n"
-                     "    PRESS ANY KEY   \n"
-                     "       TO RUN       \n"
-                     "                    \n"
-                     "                    \n"
-                     "                    \n"
-                     "                    \n"
-                     "                    \n"
-                     " sprig.hackclub.com \n");
+    errorbuf_color = color16(255, 138, 0); // cyan
+
+    strcpy(errorbuf, "\\ :::::::::::::::: \\\n"
+                     "\\                  \\\n"
+                     "\\  --------------  \\\n"
+                     "\\   PRESS ANY KEY  \\\n"
+                     "\\      TO RUN      \\\n"
+                     "\\  --------------  \\\n"
+                     "\\                  \\\n"
+                     "\\    Property of   \\\n"
+                     "\\   Kieran Klukas  \\\n"
+                     "\\                  \\\n"
+                     "\\  --------------  \\\n"
+                     "\\ kieranklukas.com \\\n"
+                     "\\sprig.hackclub.com\\\n"
+                     "\\  --------------  \\\n"
+                     "\\ :::::::::::::::: \\\n");
     render_errorbuf();
     st7735_fill_start();
     render(st7735_fill_send);
@@ -348,21 +350,21 @@ int main() {
    */
 
   errorbuf_color = color16(50, 205, 50); // lime green
-  strcpy(errorbuf, "                    \n"
-                   "                    \n"
-                   "                    \n"
-                   "                    \n"
-                   "                    \n"
-                   "                    \n"
-                   "                    \n"
-                   "    PLEASE REBOOT   \n"
-                   "     YOUR SPRIG     \n"
-                   "                    \n"
-                   "                    \n"
-                   "                    \n"
-                   "                    \n"
-                   "                    \n"
-                   " sprig.hackclub.com \n");
+  strcpy(errorbuf, "  ****************  \n"
+                   "\\                  \\\n"
+                   "\\                  \\\n"
+                   "\\                  \\\n"
+                   "\\                  \\\n"
+                   "\\                  \\\n"
+                   "\\                  \\\n"
+                   "\\   PLEASE REBOOT  \\\n"
+                   "\\    YOUR SPRIG    \\\n"
+                   "\\                  \\\n"
+                   "\\                  \\\n"
+                   "\\                  \\\n"
+                   "\\sprig.hackclub.com\\\n"
+                   "\\                  \\\n"
+                   "  ****************  \n";
   render_errorbuf();
   st7735_fill_start();
   render(st7735_fill_send);

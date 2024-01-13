@@ -32,8 +32,7 @@ static uint8_t char_to_palette_index(char c) {
     case 'H': return 13;
     case '9': return 14;
     case '.': return 15;
-    default: return 0; /* lmfao (anything to quiet the voices.)
-                                (i meant clang warnings. same thing) */
+    default: return 0; /* lmfao (anything to quiet the voices.) (i meant clang warnings. same thing) */
   }
 }
 
